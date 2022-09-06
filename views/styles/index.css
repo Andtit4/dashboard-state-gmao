@@ -1,26 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  background-color: #f8fafb;
+  background-color: white;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
 
+
 .container {
   margin: 2vw;
 }
-.items-row {
+#items-row {
   margin-top: 5vw;
   display: flex;
   flex-direction: row;
-  column-gap: 5vw;
+  column-gap: 15vw;
 }
-.circle {
+#chartContainer {
   height: 34vh;
   width: 17vw;
-  background: #ffffff;
-  box-shadow: 4px 23px 35px 6px rgba(212, 215, 228, 0.25);
-  border-radius: 50%;
 }
 
 .left {
@@ -44,7 +42,7 @@ body {
   top: 63vh;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
-  background-color: white;
+  background-color: #f8fafb;
   width: 60vw;
   height: 37vh;
 }
