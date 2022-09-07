@@ -17,6 +17,7 @@ body {
   column-gap: 15vw;
 }
 #chartContainer {
+  margin-left: 2vw;
   height: 34vh;
   width: 17vw;
 }
@@ -45,4 +46,22 @@ body {
   background-color: #f8fafb;
   width: 60vw;
   height: 37vh;
+}
+.ticket-open{
+  overflow: auto;
+}
+.ticket-open .title{
+  margin: 2vw;
+}
+.column {
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+}
+
+.column-items{
+  width: 100px;
+  height: 100px;
+  background-color: black;
 }
