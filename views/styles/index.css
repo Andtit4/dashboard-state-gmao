@@ -79,7 +79,10 @@ body {
   color: #ff7d00;
 }
 
-.
+.alert-time-left-danger{
+  padding: 1vh;
+  color: #d00000;
+}
 
 tbody tr:hover{
   background-color: aliceblue;
