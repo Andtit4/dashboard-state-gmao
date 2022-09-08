@@ -26,6 +26,9 @@ body {
   left: 72vw;
   top: 6vh;
   background: #f2f2fd;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6vw;
   border-radius: 80px;
   width: 25vw;
   height: 90vh;
