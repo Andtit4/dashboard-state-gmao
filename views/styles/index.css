@@ -48,31 +48,41 @@ body {
 }
 .ticket-open {
   overflow: auto;
+  margin-left: 5vw;
 }
 .ticket-open .title {
-  margin: 2vw;
+  margin-top: 2vw;
 }
 .ticket-open::-webkit-scrollbar {
   display: none;
 }
 .column {
-  margin: 2vw;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5vh;
+  position: absolute;
+  margin-top: 2vw;
+
 }
 
-.column-items {
+.column-item{
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100px;
-  height: 100px;
-  background-color: black;
+  column-gap: 4vw;
 }
-.column-item-id{
-  position: relative;
-  left: 8vw;
-  width: 100px;
-  height: 100px;
-  background-color: black;
+
+.alert-time-left-init{
+  padding: 1vh;
+  color: #ffd500;
 }
+
+.alert-time-left-warning{
+  padding: 1vh;
+  color: #ff7d00;
+}
+
+.
+
+tbody tr:hover{
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
