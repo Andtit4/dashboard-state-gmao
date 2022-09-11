@@ -17,6 +17,15 @@
   </head>
   <body>
     <div class="container">
+
+      <script>
+
+        setTimeout(() => {
+          window.location.reload();
+        }, "10000");
+
+      </script>
+
       <div class="title">Dashboard</div>
       <div id="items-row">
         <div
@@ -30,9 +39,14 @@
 
         <div class="circle"></div>
         <div class="left">
-            <div id="chartContainerDashed" style="background-color: transparent; width: 25vw; height: 30vh;"></div>
-            <div id="chartContainerDashedMoi" style="background-color: transparent; width: 25vw; height: 30vh;"></div>
-
+          <div
+            id="chartContainerDashed"
+            style="background-color: transparent; width: 25vw; height: 30vh"
+          ></div>
+          <div
+            id="chartContainerDashedMoi"
+            style="background-color: transparent; width: 25vw; height: 30vh"
+          ></div>
         </div>
       </div>
 
@@ -68,7 +82,8 @@
             </tr>
           </thead>
           <tbody>
-            <?php while ($demande_info = $req -> fetch()){ ?>
+            <?php while ($demande_info = $req ->
+            fetch()){ ?>
             <tr>
               <td><?= $demande_info['id_ticket']; ?></td>
               <td><?= $demande_info['type_demande']; ?></td>
@@ -78,28 +93,6 @@
               <td class="alert-time-left-init">+ 10 min</td>
             </tr>
             <?php  } ?>
-            <!-- <tr>
-              <td>3000</td>
-              <td>Maintenance</td>
-              <td>GE</td>
-              <td>LOME-CENTRE</td>
-              <td>test@test.tg</td>
-              <td class="alert-time-left-warning">+ 31 min</td>
-            </tr>
-            <tr>
-              <td>3000</td>
-              <td>Maintenance</td>
-              <td>GE</td>
-              <td>LOME-CENTRE</td>
-              <td>test@test.tg</td>
-              <td class="alert-time-left-danger">+ 50 min</td>
-            </tr> -->
- 
-            <!--             <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr> -->
           </tbody>
         </table>
       </div>

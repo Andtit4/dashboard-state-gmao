@@ -21,13 +21,6 @@ window.onload = function () {
             dataPoints: [
                 { y: 26, name: "Ticket en retard de traitement", exploded: true },
                 { y: 20, name: "Ticket effectué dans les normes" },
-/*                 { y: 1176121, indexLabel: "Nintendo DS"},
-				{ y: 1727161, indexLabel: "PSP" },
-				{ y: 4303364, indexLabel: "Nintendo 3DS"},
-				{ y: 1717786, indexLabel: "PS Vita"} */
-/*                 { y: 5, name: "Debt/Capital" },
-                { y: 3, name: "Elected Officials" },
-                { y: 7, name: "University" }, */
             ]
         }]
     });
