@@ -68,15 +68,17 @@
             </tr>
           </thead>
           <tbody>
+            <?php while ($demande_info = $req -> fetch()){ ?>
             <tr>
-              <td>3000</td>
-              <td>Maintenance</td>
-              <td>GE</td>
-              <td>LOME-CENTRE</td>
-              <td>test@test.tg</td>
+              <td><?= $demande_info['id_ticket']; ?></td>
+              <td><?= $demande_info['type_demande']; ?></td>
+              <td><?= $demande_info['equipement']; ?></td>
+              <td><?= $demande_info['site_demande']; ?></td>
+              <td><?= $demande_info['add_by']; ?></td>
               <td class="alert-time-left-init">+ 10 min</td>
             </tr>
-            <tr>
+            <?php  } ?>
+            <!-- <tr>
               <td>3000</td>
               <td>Maintenance</td>
               <td>GE</td>
@@ -91,7 +93,7 @@
               <td>LOME-CENTRE</td>
               <td>test@test.tg</td>
               <td class="alert-time-left-danger">+ 50 min</td>
-            </tr>
+            </tr> -->
  
             <!--             <tr>
               <th scope="row">3</th>

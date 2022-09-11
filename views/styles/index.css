@@ -25,7 +25,7 @@ body {
   position: fixed;
   left: 72vw;
   top: 6vh;
-  background: #f2f2fd;
+  /* background: #f2f2fd; */
   display: flex;
   flex-direction: column;
   row-gap: 6vw;
