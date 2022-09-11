@@ -83,14 +83,14 @@
           </thead>
           <tbody>
             <?php while ($demande_info = $req ->
-            fetch()){ ?>
+            fetch()){  ?>
             <tr>
               <td><?= $demande_info['id_ticket']; ?></td>
               <td><?= $demande_info['type_demande']; ?></td>
               <td><?= $demande_info['equipement']; ?></td>
               <td><?= $demande_info['site_demande']; ?></td>
               <td><?= $demande_info['add_by']; ?></td>
-              <td class="alert-time-left-init">+ 10 min</td>
+              <td class="alert-time-left-init"> <?= $demande_info['date_envoi']; ?> </td>
             </tr>
             <?php  } ?>
           </tbody>
