@@ -2,6 +2,6 @@
 require('./config/db/db.php');
 
 
-include('')
+include('views/index.html');
 
 ?>
