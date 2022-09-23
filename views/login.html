@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="views/styles/login.css" />
     <title>Login - State GMAO</title>
   </head>
   <body>
     <div class="container">
       <div class="left">
         <div class="title">
-          <img src="img/splash.pngf" alt="Logo" srcset="" />
+          <img src="views/img/splash.png" alt="Logo" srcset="" />
           <h2>State GMAO.</h2>
         </div>
-        <img src="img/img.png" alt="img" srcset="">
+        <img src="views/img/img.png" alt="img" srcset="">
       </div>
       <div class="rigth">
         <div class="container">
             <div class="title">Login.</div>
-            <div class="alert-danger">Username ou mot de passe incorrect!</div>
+            <?php
+                if (isset($message)){
+                    echo "
+                    <div class='alert-danger'> </div> 
+                    ";
+                }
+            ?>
             <form class="items" method="post" action="">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <input type="submit" value="Connexion" />
+                <input type="text" placeholder="Username" name="username" />
+                <input type="password" placeholder="Password" name="password" />
+                <input type="submit" value="Connexion" name="connexion" />
             </form>
         </div>
-        <div class="bottom">Copyrigth 2022</div>
+        <!-- <div class="bottom">Copyrigth 2022</div> -->
       </div>
     </div>
   </body>

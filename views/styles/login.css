@@ -6,7 +6,6 @@ body {
 }
 
 .alert-danger{
-    display: none;
     margin-top: 2vw;
     padding: 2vh;
     background-color: #d8372b;
@@ -81,8 +80,8 @@ form input[type="submit"]{
     border: none;
     color: white;
 }
-.bottom{
+/* .bottom{
     position: relative;
     margin-left: 2vw;
     top: 15vw;
-}
+} */
