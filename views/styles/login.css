@@ -1,4 +1,21 @@
 body {
+  overflow: hidden;
   background-color: white;
   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.left {
+  width: 50vw;
+  height: 100vh;
+  background-color: rgb(226, 164, 47);
+}
+
+.left img {
+  margin: 2vw;
+  width: 3vw;
+  height: 5vh;
 }
