@@ -9,13 +9,27 @@ body {
   flex-direction: column;
 }
 .left {
-  width: 50vw;
+  color: white;
+  width: 35vw;
   height: 100vh;
   background-color: rgb(226, 164, 47);
 }
 
 .left img {
+    width: 30vw;
+    height: 80vh;
+    margin-left: 6vw;
+    transform: rotate(331deg);
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.title img {
   margin: 2vw;
-  width: 3vw;
-  height: 5vh;
+  width: 2vw;
+  height: 4vh;
+}
+.title h2 {
+  margin-top: 2vw;
 }
