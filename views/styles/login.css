@@ -6,7 +6,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .left {
   color: white;
@@ -32,4 +32,32 @@ body {
 }
 .title h2 {
   margin-top: 2vw;
+}
+
+.rigth .container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 21vw;
+    margin-top: 6vw;
+    width: 21vw;
+    height: 40vh;
+    border: 1px solid black;
+}
+
+.rigth .container .title{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.rigth .container .items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+    margin-top: 3vw;
+}
+
+form input[type="text"], [type="password"]{
+    font-family: "Poppins", sans-serif;
+    width: 20vw;
+    height: 4vh;
 }
