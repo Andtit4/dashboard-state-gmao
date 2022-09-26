@@ -1,6 +1,5 @@
 <?php 
-session_start();
-require('./config/db/db.php');
+require('config/db.php');
 
 if (isset($_POST['connexion'])){
     if (!empty($_POST['username'] && $_POST['password'])){
@@ -33,8 +32,6 @@ if (isset($_POST['connexion'])){
         $message = "Veuillez remplir tous les champs!";
     }
 }
-// echo $now;
 
-include('views/login.html');
-
+require('views/login.php');
 ?>

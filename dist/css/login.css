@@ -1,0 +1,88 @@
+body {
+  overflow: hidden;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  /* margin: 0; */
+}
+
+.alert-danger{
+    margin-top: 2vw;
+    padding: 2vh;
+    background-color: #d8372b;
+    color: white;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  color: white;
+  width: 35vw;
+  height: 100vh;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background-color: rgb(226, 164, 47);
+}
+
+.left img {
+    width: 30vw;
+    height: 80vh;
+    margin-left: 6vw;
+    transform: rotate(331deg);
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.title img {
+  margin: 2vw;
+  width: 2vw;
+  height: 4vh;
+}
+.title h2 {
+  margin-top: 2vw;
+}
+
+.rigth .container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 21vw;
+    margin-top: 12vw;
+    width: 21vw;
+    height: 40vh;
+    /* border: 1px solid black; */
+}
+
+.rigth .container .title{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.rigth .container .items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+    margin-top: 3vw;
+}
+
+form input[type="text"], [type="password"]{
+    font-family: "Poppins", sans-serif;
+    width: 20vw;
+    height: 4vh;
+}
+
+
+form input[type="submit"]{
+    font-family: "Poppins", sans-serif;
+    height: 6vh;
+    background-color: #e2a42f;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+/* .bottom{
+    position: relative;
+    margin-left: 2vw;
+    top: 15vw;
+} */

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  margin: 2vw;
+}
+#items-row {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row;
+  column-gap: 15vw;
+}
+#chartContainer {
+  margin-left: 2vw;
+  height: 34vh;
+  width: 17vw;
+}
+
+.left {
+  position: fixed;
+  left: 72vw;
+  top: 6vh;
+  /* background: #f2f2fd; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 6vw;
+  border-radius: 80px;
+  width: 25vw;
+  height: 90vh;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 600;
+  color: rgba(27, 22, 79, 0.67);
+}
+
+.ticket-open {
+  position: fixed;
+  top: 63vh;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  background-color: #f8fafb;
+  width: 60vw;
+  height: 37vh;
+}
+.ticket-open {
+  overflow: auto;
+  margin-left: 5vw;
+}
+.ticket-open .title {
+  margin-top: 2vw;
+}
+.ticket-open::-webkit-scrollbar {
+  display: none;
+}
+.column {
+  position: absolute;
+  margin-top: 2vw;
+
+}
+
+.column-item{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 4vw;
+}
+
+.alert-time-left-init{
+  padding: 1vh;
+  color: #ffd500;
+}
+
+.alert-time-left-warning{
+  padding: 1vh;
+  color: #ff7d00;
+}
+
+.alert-time-left-danger{
+  padding: 1vh;
+  color: #d00000;
+}
+
+tbody tr:hover{
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
