@@ -10,7 +10,7 @@ if (isset($_GET['id_admin'])){
     $nb_users = $req->rowCount();
 
     // Nombre total de demandes traitées
-    $req2 = $bdd -> query("SELECT * FROM traiter");
+    $req2 = $bdd -> query("SELECT * FROM traiter WHERE date_envoi = NOW()" );
     $nb_demande_traiter = $req2->rowCount();
 
     // Nombre total de demandes en attente
