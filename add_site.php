@@ -4,19 +4,22 @@ $req1 = $bdd->query("SELECT * FROM site");
 if (isset($_GET['id_admin'])) {
   $id_admin = intval($_GET['id_admin']);
   if (isset($_POST['ajouter'])) {
-    if (!empty($_POST['siteid'] && $_POST['nom'] && $_POST['typologie'] && $_POST['classification'] && $_POST['zone'] && $_POST['de'] && $_POST['a'] && $_POST['sla'])) {
+    if (!empty($_POST['siteid'] && $_POST['nom'] && $_POST['typologie'] && $_POST['classification'] && $_POST['zone'] && $_POST['de'] && $_POST['a'] && $_POST['sla-de'] && $_POST['sla-a'])) {
       $siteid = htmlspecialchars(strtoupper($_POST['siteid']));
       $nom = htmlspecialchars(strtoupper($_POST['nom']));
       $typologie = htmlspecialchars(strtoupper($_POST['typologie']));
       $classification = htmlspecialchars(strtoupper($_POST['classification']));
       $zone = htmlspecialchars(strtoupper($_POST['zone']));
-      $sla = htmlspecialchars(strtoupper($_POST['sla']));
+      $sla_de = intval(($_POST['sla-de']));
+      $sla_a = intval(($_POST['sla-a']));
 
+      // Calcul du sla
+      $sla = intval(($sla_a  + $sla_de)/2);
       $de = intval($_POST['de']);
       $a = intval($_POST['a']);
 
       // Calacul de la distance
-      $distance =  intval($a - $b);
+      $distance =  intval(($a + $b)/2);
 
       $req = $bdd->query("INSERT INTO site VALUES ('$siteid', '$nom', '$typologie', '$classification', '$zone', '$distance', '$sla')");
       header("Location: add_site.php?id_admin=" . $id_admin);

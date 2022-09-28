@@ -160,6 +160,8 @@
                         <th>Typologie</th>
                         <th>Classification</th>
                         <th>Zone</th>
+                        <th>Distance</th>
+                        <th>SLA</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -170,6 +172,8 @@
                           <td><?= $list['typologie']; ?></td>
                           <td><?= $list['classification']; ?></td>
                           <td><?= $list['zone']; ?></td>
+                          <td><?= $list['distance']; ?></td>
+                          <td><?= $list['sla']; ?></td>
                         </tr>
                       <?php } ?>
                     </tbody>
