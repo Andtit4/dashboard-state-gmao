@@ -101,10 +101,28 @@
                       </select>
                       </div>
                       <div class="form-group">
+                        ZONE
                         <select name="zone" id="">
                           <option value="URBAIN">URBAIN</option>
                           <option value="SUB URBAIN">SUB URBAIN</option>
                           <option value="RURALE">RURALE</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        de
+                        <select name="de" id="">
+                          <option value="1">1</option>
+                          <option value="51">51</option>
+                          <option value="101">101</option>
+                          <option value="151">151</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        à
+                        <select name="a" id="">
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                          <option value="200">200</option>
                         </select>
                       </div>
                   </div>
