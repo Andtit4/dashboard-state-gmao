@@ -98,8 +98,14 @@
                         <option value="BRONZE">BRONZE</option>
                         <option value="PLATINUM">PLATINUM</option>
                         <option value="DATACENTER">DATACENTER</option>
-
                       </select>
+                      </div>
+                      <div class="form-group">
+                        <select name="zone" id="">
+                          <option value="URBAIN">URBAIN</option>
+                          <option value="SUB URBAIN">SUB URBAIN</option>
+                          <option value="RURALE">RURALE</option>
+                        </select>
                       </div>
                   </div>
                   <!-- /.card-body -->
@@ -125,6 +131,7 @@
                           <th>Nom</th>
                           <th>Typologie</th>
                           <th>Classification</th>
+                          <th>Zone</th>
                         </tr>
                           </thead>
                           <tbody>
@@ -134,6 +141,7 @@
                           <td><?= $list['nom']; ?></td>
                           <td><?= $list['typologie']; ?></td>
                           <td><?= $list['classification']; ?></td>
+                          <td><?= $list['zone']; ?></td>
                         </tr>
                         <?php } ?>
                           </tbody>
