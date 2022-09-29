@@ -1,5 +1,6 @@
 <?php 
 require('config/db/db.php');
+$now = new DateTime();
 
 $req = $bdd -> query("SELECT * FROM demande WHERE type_demande = 'HS' ORDER BY date_envoi ASC");
 
@@ -18,9 +19,6 @@ echo $i['date_envoi'];
 $date = htmlspecialchars($i['date_envoi']);
 $date1 = new DateTime($date);
 // Difference entre les dates
-$now = new DateTime();
-
-// $diff = date_diff($now, $i['date_envoi']);
 
 echo "\n".$date1->diff($now)->format("%d day %h hour M %i minute");
 
