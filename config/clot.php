@@ -17,7 +17,7 @@ $equipement = $ticket_info['equipement'];
 $nombre = $ticket_info['nombre'];
 $add_by = $admin_info['email']; 
 
-$req1 = $bdd -> query("INSERT INTO traiter VALUES ('$id_ticket', '$site', '$type', '$equipement', '$nombre', '$add_by', '0' )");
+$req1 = $bdd -> query("INSERT INTO traiter VALUES ('$id_ticket', '$site', '$type', '$equipement', '$nombre', '$add_by', '0', NOW() )");
 $req2 = $bdd->query("DELETE FROM demande WHERE id_ticket = '$id_ticket'");
 
 header("Location: ../dashboard.php?id_admin=".$id_admin);

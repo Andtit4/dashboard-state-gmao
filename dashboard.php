@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require('config/db.php');
-
+$date = date('Y-m-d');
 if (isset($_GET['id_admin'])){
     $id_admin = intval($_GET['id_admin']);
 
@@ -10,13 +10,12 @@ if (isset($_GET['id_admin'])){
     $nb_users = $req->rowCount();
 
     // Nombre total de demandes traitées
-    $req2 = $bdd -> query("SELECT * FROM traiter WHERE date_envoi = NOW()" );
+    $req2 = $bdd -> query("SELECT * FROM traiter WHERE date_envoi = '$date' " );
     $nb_demande_traiter = $req2->rowCount();
 
     // Nombre total de demandes en attente
     $req3 = $bdd -> query("SELECT * FROM demande");
     $nb_demande = $req3->rowCount();
-    
     
 }
 else{
