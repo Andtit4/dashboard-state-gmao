@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="views/js/main.js"></script>
-    <link rel="stylesheet" href="views/styles/index.css" />
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <div class="container">
 
-      <script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="views/js/main.js"></script>
+  <link rel="stylesheet" href="views/styles/index.css" />
+  <title>Dashboard</title>
+</head>
 
-        setTimeout(() => {
-          window.location.reload();
-        }, "10000");
+<body>
+  <div class="container">
 
-      </script>
+    <script>
+      setTimeout(() => {
+        window.location.reload();
+      }, "10000");
+    </script>
 
-      <div class="title">Dashboard</div>
-      <div id="items-row">
-        <div
-          id="chartContainer"
-          style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"
-        ></div>
-        <div
-          id="chartContainerBlock"
-          style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"
-        ></div>
+    <div class="title">Dashboard</div>
+    <div id="items-row">
+      <div id="chartContainer" style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"></div>
+      <div id="chartContainerBlock" style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"></div>
 
-        <div class="circle"></div>
-        <div class="left">
-          <div
-            id="chartContainerDashed"
-            style="background-color: transparent; width: 25vw; height: 30vh"
-          ></div>
-          <div
-            id="chartContainerDashedMoi"
-            style="background-color: transparent; width: 25vw; height: 30vh"
-          ></div>
-        </div>
+      <div class="circle"></div>
+      <div class="left">
+        <div id="chartContainerDashed" style="background-color: transparent; width: 25vw; height: 30vh"></div>
+        <div id="chartContainerDashedMoi" style="background-color: transparent; width: 25vw; height: 30vh"></div>
       </div>
+    </div>
 
-      <div class="ticket-open">
-        <div class="title"><!-- Tickets ouverts --></div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID Ticket</th>
-              <th scope="col">Type de demande</th>
-              <th scope="col">Equipement</th>
-              <th scope="col">Site</th>
-              <th scope="col">Adresse</th>
-              <th scope="col">Temps écoulé</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php while ($demande_info = $req ->
-            fetch()){  ?>
+    <div class="ticket-open">
+      <div class="title">
+        <!-- Tickets ouverts -->
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID Ticket</th>
+            <th scope="col">Type de demande</th>
+            <th scope="col">Equipement</th>
+            <th scope="col">Site</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Temps écoulé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php while ($demande_info = $req->fetch()) {  ?>
             <tr>
               <td><?= $demande_info['id_ticket']; ?></td>
               <td><?= $demande_info['type_demande']; ?></td>
               <td><?= $demande_info['equipement']; ?></td>
               <td><?= $demande_info['site_demande']; ?></td>
               <td><?= $demande_info['add_by']; ?></td>
-              <td class="alert-time-left-init"> <?= $demande_info['date_envoi']; ?> </td>
+              <td class="alert-time-left-init"> 
+                <?php
+                    $date = new DateTime(htmlspecialchars($demande_info['date_envoi']));
+                    echo $date->diff($now)->format('%h h %i minutes') 
+                    ?> 
+              </td>
             </tr>
-            <?php  } ?>
-          </tbody>
-        </table>
-      </div>
+          <?php  } ?>
+        </tbody>
+      </table>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
