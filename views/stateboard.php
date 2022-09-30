@@ -59,7 +59,7 @@
               <td class="alert-time-left-init"> 
                 <?php
                     $date = new DateTime(htmlspecialchars($demande_info['date_envoi']));
-                    echo $date->diff($now)->format('%h h %i minutes') 
+                    echo $date->diff($now)->format('%h h %i minutes');
                     ?> 
               </td>
             </tr>
