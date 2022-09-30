@@ -5,11 +5,11 @@ if (isset($_GET['id_admin'])) {
   $id_admin = intval($_GET['id_admin']);
   if (isset($_POST['ajouter'])) {
     if (!empty($_POST['siteid'] && $_POST['nom'] && $_POST['typologie'] && $_POST['classification'] && $_POST['zone'] && $_POST['de'] && $_POST['a'] && $_POST['sla-de'] && $_POST['sla-a'])) {
-      $siteid = htmlspecialchars(strtoupper($_POST['siteid']));
-      $nom = htmlspecialchars(strtoupper($_POST['nom']));
-      $typologie = htmlspecialchars(strtoupper($_POST['typologie']));
-      $classification = htmlspecialchars(strtoupper($_POST['classification']));
-      $zone = htmlspecialchars(strtoupper($_POST['zone']));
+      $siteid = strtoupper(($_POST['siteid']));
+      $nom = strtoupper(($_POST['nom']));
+      $typologie = strtoupper(($_POST['typologie']));
+      $classification = strtoupper(($_POST['classification']));
+      $zone = strtoupper(($_POST['zone']));
       $sla_de = intval(($_POST['sla-de']));
       $sla_a = intval(($_POST['sla-a']));
 
