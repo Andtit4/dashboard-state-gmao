@@ -59,7 +59,17 @@
               <td class="alert-time-left-init"> 
                 <?php
                     $date = new DateTime(htmlspecialchars($demande_info['date_envoi']));
-                    echo $date->diff($now)->format('%h h %i minutes');
+                    $jour = intval($date->diff($now)->format('%d'));
+                    $heure = intval($date->diff($now)->format('%h'));
+                    $minute = intval($date->diff($now)->format('%i'));
+                    if (($minute > 5 ) && ($jour > 1)){
+                      echo "<div style='color: red'>".$jour." jour ".$heure." heure ".$minute." minute "."</div>";
+                    }else{
+                      echo $minute." minute ";
+                    }
+
+                    
+                    // echo $date->diff($now)->format('%d jour %h heure %i minutes');
                     ?> 
               </td>
             </tr>
