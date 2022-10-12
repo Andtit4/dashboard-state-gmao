@@ -36,8 +36,8 @@ $data_entry_day_circle = array(
 
 
 // Cammamber de la zone lomé
-/* $req4 = $bdd -> query("SELECT zone.site, id_ticket.traiter,  FROM demande, site, traiter WHERE demande.type_demande = 'HS' AND ");
-$data_entry_day_circle_zone_lome = array(); */
+/*  $req4 = $bdd -> query("SELECT zone.site, id_ticket.traiter,  FROM demande, site, traiter WHERE demande.type_demande = 'HS' AND site.zone = 'LOME' ");
+$data_entry_day_circle_zone_lome = array();  */
 
 include('views/stateboard.php');
 
