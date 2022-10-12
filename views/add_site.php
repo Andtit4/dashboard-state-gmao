@@ -92,9 +92,21 @@
                   <div class="form-group">
                     ZONE
                     <select name="zone" id="">
-                      <option value="URBAIN">URBAIN</option>
-                      <option value="SUB URBAIN">SUB URBAIN</option>
-                      <option value="RURALE">RURALE</option>
+                      <option value="LOME-E">LOME-E</option>
+                      <option value="LOME-O">LOME-O</option>
+                      <option value="LOME-N">LOME-N</option>
+                      <option value="LOME-VIP">LOME-VIP</option>
+                      <option value="MARITIME-A">MARITIME-A</option>
+                      <option value="MARITIME-T">MARITIME-T</option>
+                      <option value="PLATEAUX-A">PLATEAUX-A</option>
+                      <option value="PLATEAUX-K">PLATEAUX-K</option>
+                      <option value="PLATEAUX-N">PLATEAUX-N</option>
+                      <option value="CENTRALE-S">CENTRALE-S</option>
+                      <option value="CENTRALE-B">CENTRALE-B</option>
+                      <option value="KARA-K">KARA-K</option>
+                      <option value="KARA-B">KARA-B</option>
+                      <option value="SAVANE-M">SAVANE-M</option>
+                      <option value="SAVANE-D">SAVANE-D</option>
                     </select>
                   </div>
                 </div>

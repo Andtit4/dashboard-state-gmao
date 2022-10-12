@@ -23,13 +23,44 @@
 
     <div class="title">Dashboard</div>
     <div id="items-row">
-      <div id="chartContainer" style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"></div>
+      <div id="datas">
+        <?php  //echo json_encode($data_entry_day_circle, JSON_NUMERIC_CHECK); 
+        ?>
+        <script defer>
+          window.onload = function() {
+            // datas = document.getElementById("datas");
+            console.log("datas loaded" + datas);
+            var chart = new CanvasJS.Chart("chartContainer", {
+              animationEnabled: true,
+              exportEnabled: true,
+              title: {
+                text: "Rapport journalier global"
+              },
+              subtitles: [{
+                text: "Site Hors-service Global"
+              }],
+              data: [{
+                type: "pie",
+                showInLegend: "true",
+                legendText: "{label}",
+                indexLabelFontSize: 16,
+                indexLabel: "{label} - #percent%",
+                yValueFormatString: "฿#,##0",
+                dataPoints: <?php echo json_encode($data_entry_day_circle, JSON_NUMERIC_CHECK);
+                            ?>
+              }]
+            });
+            chart.render();
+          }
+        </script>
+      </div>
+      <div id="chartContainer" style="height: auto; width: 100%;">
+
+      </div>
       <div id="chartContainerBlock" style="font-family: 'Poppins', sans-serif; background-color: #f8fafb"></div>
 
       <div class="circle"></div>
       <div class="left">
-        <div id="chartContainerDashed" style="background-color: transparent; width: 25vw; height: 30vh"></div>
-        <div id="chartContainerDashedMoi" style="background-color: transparent; width: 25vw; height: 30vh"></div>
       </div>
     </div>
 
@@ -56,21 +87,21 @@
               <td><?= $demande_info['equipement']; ?></td>
               <td><?= $demande_info['site_demande']; ?></td>
               <td><?= $demande_info['add_by']; ?></td>
-              <td class="alert-time-left-init"> 
+              <td class="alert-time-left-init">
                 <?php
-                    $date = new DateTime(htmlspecialchars($demande_info['date_envoi']));
-                    $jour = intval($date->diff($now)->format('%d'));
-                    $heure = intval($date->diff($now)->format('%h'));
-                    $minute = intval($date->diff($now)->format('%i'));
-                    if (($minute > 5 ) && ($jour > 1)){
-                      echo "<div style='color: red'>".$jour." jour ".$heure." heure ".$minute." minute "."</div>";
-                    }else{
-                      echo $minute." minute ";
-                    }
+                $date = new DateTime(htmlspecialchars($demande_info['date_envoi']));
+                $jour = intval($date->diff($now)->format('%d'));
+                $heure = intval($date->diff($now)->format('%h'));
+                $minute = intval($date->diff($now)->format('%i'));
+                if (($minute > 5) && ($jour > 1)) {
+                  echo "<div style='color: red'>" . $jour . " jour " . $heure . " heure " . $minute . " minute " . "</div>";
+                } else {
+                  echo $minute . " minute ";
+                }
 
-                    
-                    // echo $date->diff($now)->format('%d jour %h heure %i minutes');
-                    ?> 
+
+                // echo $date->diff($now)->format('%d jour %h heure %i minutes');
+                ?>
               </td>
             </tr>
           <?php  } ?>
