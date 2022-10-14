@@ -48,6 +48,13 @@
           </div>
         </div>
       </div>
+      <div style=" color: red; ">
+        <?php if (isset($message)) {
+          echo $message;
+        }  ?>
+      </div>
+
+
       <section class="content">
         <div class="card card-success">
           <div class="card-header">
@@ -172,6 +179,7 @@
                         <th>Typologie</th>
                         <th>Classification</th>
                         <th>Zone</th>
+                        <th>Zone globale</th>
                         <th>Distance</th>
                         <th>SLA</th>
                       </tr>
@@ -184,6 +192,7 @@
                           <td><?= $list['typologie']; ?></td>
                           <td><?= $list['classification']; ?></td>
                           <td><?= $list['zone']; ?></td>
+                          <td><?= $list['zone_generale']; ?></td>
                           <td><?= $list['distance']; ?></td>
                           <td><?= $list['sla']; ?></td>
                         </tr>

@@ -13,6 +13,23 @@ if (isset($_GET['id_admin'])) {
       $sla_de = intval(($_POST['sla-de']));
       $sla_a = intval(($_POST['sla-a']));
 
+      // Détermination de la zone  generame
+      for ($i = 0; $i <  strlen($zone); $i++) {
+        if ($zone[0] == 'L'){
+          $zone_generale = 'LOME';
+          echo $zone_generale;
+        } else if ($zone[0] == 'M'){
+          $zone_generale = 'MARITIME';
+        }else if ($zone[0] == 'S'){
+          $zone_generale = 'SAVANE';
+        }else if ($zone[0] == 'C'){
+          $zone_generale = 'CENTRALE';
+        }else if ($zone[0] == 'P'){
+          $zone_generale = 'PLATEAUX';
+        }else if ($zone[0] == 'K'){
+          $zone_generale = 'KARA';
+        }
+      }
       // Calcul du sla
       $sla = intval(($sla_a  + $sla_de)/2);
       $de = intval($_POST['de']);
@@ -21,7 +38,7 @@ if (isset($_GET['id_admin'])) {
       // Calacul de la distance
       $distance =  intval(($a + $b)/2);
 
-      $req = $bdd->query("INSERT INTO site VALUES ('$siteid', '$nom', '$typologie', '$classification', '$zone', '$distance', '$sla')");
+      $req = $bdd->query("INSERT INTO site VALUES ('$siteid', '$nom', '$typologie', '$classification', '$zone', '$distance', '$sla', '$zone_generale')");
       header("Location: add_site.php?id_admin=" . $id_admin);
     } else {
       $message = "Veuillez remplir les champs";
